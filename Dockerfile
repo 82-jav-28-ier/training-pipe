@@ -1,7 +1,7 @@
 ARG region
 
 # SageMaker PyTorch image
-FROM python:3.8-slim
+FROM 171803786209.dkr.ecr.us-east-1.amazonaws.com/python:3.8-slim-local
 
 ENV PATH="/opt/ml/code:${PATH}"
 
