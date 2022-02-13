@@ -3,13 +3,11 @@ from os import getenv, path
 import boto3
 import pandas as pd
 from joblib import dump
-import matplotlib.pyplot as plt
 from imblearn.over_sampling import SMOTE
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import (
-    accuracy_score, confusion_matrix, recall_score, 
-    plot_confusion_matrix, precision_score, plot_roc_curve
-)
+from sklearn.metrics import (accuracy_score,
+                             confusion_matrix,
+                             precision_score)
 
 from sklearn.ensemble import RandomForestClassifier
 
@@ -61,6 +59,6 @@ print(pd.DataFrame(confusion_matrix(y_test,y_predict)))
 
 # save model on disk
 dump(model, LOCAL_MODEL_PATH) 
-
+print('storing on remote bucket')
 # store on s3
 s3.meta.client.upload_file(LOCAL_MODEL_PATH, BUCKET_STORAGE, REMOTE_MODEL_PATH)
