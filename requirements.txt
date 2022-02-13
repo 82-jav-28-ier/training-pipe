@@ -1,0 +1,7 @@
+boto3==1.20.54
+numpy==1.22.2
+pandas==1.4.1
+pyarrow==7.0.0
+imblearn
+joblib==1.1.0
+scikit-learn==1.0.2
