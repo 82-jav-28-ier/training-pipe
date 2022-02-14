@@ -15,7 +15,7 @@ from sklearn.metrics import (accuracy_score,
 from sklearn.ensemble import RandomForestClassifier
 
 
-input_dir = "/opt/ml/input"
+input_dir = "/opt/ml/input/data"
 model_dir = "/opt/ml/model"
 output_dir = "/opt/ml/output"
 
